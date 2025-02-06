@@ -1,0 +1,336 @@
+/* Eléments principaux de la page */  /* ========================================================================================= */
+
+*
+{ margin: 0;
+  padding: 0;}
+
+body
+{
+	background : #D9D9D9;
+    font: normal 1.00em 'trebuchet ms', arial, sans-serif;
+    color: #555;
+}
+
+#bloc_page, #titre_principal, nav
+{
+    width: 900px;
+    margin: auto;
+}
+
+/* Header */  /* ============================================================================================================== */
+
+header
+{
+    background: White;
+	height : 140px;
+    display: flex;
+	flex-direction : column;
+    /* justify-content: space-between; */
+	/* border : 1px solid red; */
+}
+
+#titre_principal
+{
+    display: flex;
+    flex-direction: column;
+	/* border : 1px solid red; */
+}
+
+#logo
+{
+    display: flex;
+    flex-direction: row;
+    align-items: baseline;
+	/* border : 1px solid red; */
+}
+
+
+header h1
+{	font: normal 2.5em 'century gothic', arial, sans-serif;
+	letter-spacing : 0.1em;
+	color : #000;
+	/* border : 1px solid blue; */
+}
+
+header h2
+{
+    font: normal 1.0em 'century gothic', arial, sans-serif;
+	color: #000;
+	/* border : 1px solid blue; */
+}
+
+/* Navigation */  /* ============================================================================================================== */
+nav
+{
+	/* border : 1px solid yellow; */
+	margin-bottom : 0px;
+}
+
+#menu, #menu ul
+{	
+	list-style : none;
+	margin : 0;
+	padding : 0;
+	text-align : right;
+	--menu-border-color: White; /*ici on definit une variable pour la couleur des bordures du menu*/
+}
+
+
+#menu li
+{
+	display:inline-block;
+	background-color : #4484CE; /* bleu des onglets de navigation*/
+	position:relative;
+	border-radius:8px 8px 0 0;
+	text-align : center;
+	border-top : 1px solid var(--menu-border-color);
+	border-left : 1px solid var(--menu-border-color);
+	border-right : 1px solid var(--menu-border-color);
+}
+
+#menu ul li{
+	display : inherit;
+	border-top : 1px solid var(--menu-border-color);
+	border-left : 1px solid var(--menu-border-color);
+	border-right : 1px solid var(--menu-border-color);
+	border-radius: 0;
+	background-color : #4484CE;
+	
+}
+
+#menu ul li:last-child
+{
+border-radius:0 0 8px 8px;
+border : 1px solid var(--menu-border-color);
+}
+
+#menu ul{
+	position:absolute;
+	z-index: 1000;
+	max-height:0;
+	left: -1px; /* ici on prend en compte la largeur de la bordure */
+	right: -1px; /* ici on prend en compte la largeur de la bordure */
+	overflow:hidden;
+	-moz-transition: .8s all .1s;
+	-webkit-transition: .8s all .1s;
+	transition: .8s all .1s;
+}
+
+#menu li:hover ul
+{
+max-height:15em;
+}
+
+#menu a{
+text-decoration:none;
+display:block;
+padding:8px 32px;
+color:#fff;
+font-family:arial;
+}
+#menu ul a{
+padding:8px 0;
+}
+#menu li:hover li a{
+color:#fff;
+text-transform:inherit;
+}
+#menu li:hover a, #menu li li:hover a{
+color:#000;
+}
+
+
+/* Bannière */  /* ============================================================================================================== */
+
+#banniere_image
+{
+    height: 200px;
+    /* border-radius: 5px; */
+    background: url('images/SaintNaz.jpg') no-repeat;
+    position: relative;
+    /* box-shadow: 0px 4px 4px #1c1a19; */
+	margin-top: 15px;
+    margin-bottom: 5px;
+	border : 10px solid rgb(230,230,230);
+	border-radius:8px;
+
+}
+
+
+/* Corps */   /* ============================================================================================================== */
+
+section
+{
+    display: flex;
+	flex-direction : column;
+	justify-content : space-between;
+    margin-top: 10px;
+	margin-bottom: 20px;
+	/* border : 1px solid blue; */
+}
+
+section span.row_display
+{
+    display: flex;
+	flex-direction : row;
+	justify-content : space-between;
+	/* border : 1px solid blue; */
+}
+
+article, aside
+{
+    text-align: justify;
+}
+
+article
+{	
+	padding-left : 10px;
+    padding-right: 10px;
+	margin-top : 10px;
+	margin-bottom : 10px;
+
+	border-radius:8px;
+	background-color : #EEE;
+	/* border : 1px solid green; */
+}
+
+article.cours{
+	display : flex;
+	flex-direction: row;
+	/* align-items : flex-start; */
+	justify-content : space-between;
+	/* border : 1px solid green; */
+}
+
+article.cours2{
+	flex : 1;
+	display : flex;
+	flex-direction: column;
+	/* align-items : flex-start; */
+}
+
+article.devoir{
+	flex : 0.4;
+	/* display : block; */
+	/* 	flex-direction: column; */
+	margin-left : 10px;
+	/* align-items : flex-start; */
+	text-align : left;
+}
+
+/* .ico_categorie */
+/* { */
+    /* vertical-align: middle; */
+    /* margin-right: 8px; */
+/* } */
+
+article h2
+{ 	font: normal 2em 'century gothic', arial;
+	margin: 0 0 5px 0;
+	padding: 0px 0 0px 0;
+	color: #000;
+	/* border : 1px solid blue; */
+}
+
+article h3
+{ 	font: normal 1.5em 'century gothic', arial;
+	margin : 0 0 5px 0;
+	padding: 9px 0 5px 0;
+	color: #009FBC;
+	/* border : 1px solid blue; */
+}
+
+article h4
+{ 	font: normal 1.2em 'century gothic', arial;
+	margin : 0 0 5px 0;
+	padding: 5px 0 0 0;
+	color: #000;
+	/* border : 1px solid blue; */
+}
+
+article h5
+{ 	font: normal 1.0em 'century gothic', arial;
+	margin : 0px 0px 5px 50px;
+	padding: 0 0 0 0;
+	color: #000;
+	/* border : 1px solid blue; */
+	max-height: 999999px; /* to prevent chrome to resize links fontsize -> wtf ??? */
+}
+
+article p
+{
+    font-size: 0.8em;
+	line-height: 1.7em;
+	margin-bottom : 5px;
+	/* border : 1px solid blue; */
+}
+
+article img.style1
+{	
+	align-self : center;
+	margin-top : 10px;
+	margin-bottom : 10px;
+	width:250px;
+	border-radius : 8px;
+	/* border : 1px solid red; */
+}
+
+article img.style2
+{	
+	align-self : center;
+	margin-top : 10px;
+	margin-bottom : 10px;
+	width:150px;
+	border-radius : 8px;
+	/* border : 1px solid red; */
+}
+
+article img.style3
+{	
+	align-self : center;
+	margin-top : 10px;
+	margin-bottom : 10px;
+	width:200px;
+	border-radius : 8px;
+	/* border : 1px solid red; */
+}
+
+
+article span.bloc
+{
+	display : block;
+	flex : 1;
+	/* border : 1px solid red; */
+}
+
+
+/* Footer */    /* ============================================================================================================== */
+
+footer
+{
+/* { width: 100%; */
+  font-family: 'trebuchet ms', sans-serif;
+  font-size: 0.8em;
+  height: 100px;
+  padding: 20px 0 0px 0;
+  text-align: center; 
+  background: White;
+  color: #A8AA94;
+}
+
+footer p /* plain text */
+{ 	line-height: 1.7em;
+	padding: 0 0 10px 0;
+	/* border : 1px solid red; */
+}
+
+footer a /* liens */
+{	color: #000;
+	text-decoration: none;
+	/* border : 1px solid blue; */
+}
+
+footer a:hover /* couleur liens si souris dessus */
+{ color: #4484CE;
+  text-decoration: none;}
+
